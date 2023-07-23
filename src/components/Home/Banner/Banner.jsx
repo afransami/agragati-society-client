@@ -21,13 +21,13 @@ const Banner = () => {
           <div className="max-w-xl space-y-4 ltr:sm:text-left rtl:sm:text-right">
             <div className="text-3xl text-start font-extrabold sm:text-5xl">
               <h1 className="text-white mb-4 "> Agragati Society</h1>
-              <h1 className="block text-start font-extrabold text-orange-500">
+              <h1 className="text-start font-extrabold text-orange-500">
               people united, benefits shared, progress achieved
               {/* For working together, mutual gain and shared decisions */}
               </h1>
             </div>
 
-            <p className="mt-4 text-start max-w-lg sm:text-xl/relaxed text-white">
+            <p className="mt-4 text-start max-w-lg sm:text-xl text-white">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
               illo tenetur fuga ducimus numquam ea!
             </p>

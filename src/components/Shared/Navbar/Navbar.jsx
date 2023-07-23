@@ -88,37 +88,9 @@ const Navbar = () => {
         backgroundColor: navColor,
         transition: "all 1s",
       }}
-      className="navbar fixed top-0 z-10 rounded shadow flex justify-between h-20 mx-auto container border-b-2"
+      className="navbar fixed top-0 z-10 rounded flex justify-between h-20 mx-auto container border-b border-orange-600"
     >
       <div className="">
-        {/* <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-
-          <ul
-            tabIndex={0}
-            className="menu menu-compact dropdown-content bg-white mt-3 p-2 shadow-xl rounded-box w-52 items-center justify-between flex"
-          >
-            {NavMenu}
-          </ul>
-        </div> */}
-
-        
-
         <div className="flex justify-center items-center gap-6 uppercase font-extrabold tracking-widest mx-auto text-center">
           <Link>
             <img className="w-20" src={logo} alt="" />
@@ -132,8 +104,14 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
+      </div>
 
-        <details className="dropdown dropdown-end lg:hidden -right-32">
+      <div className="navbar-end">
+        <div className="navbar-center hidden lg:flex items-center justify-between">
+          <ul className="menu menu-horizontal px-1">{NavMenu}</ul>
+        </div>
+
+        <details className="dropdown dropdown-end lg:hidden ">
           <summary className="m-1 btn ">
             <HiMenu></HiMenu>
           </summary>
@@ -144,10 +122,6 @@ const Navbar = () => {
             {NavMenu}
           </ul>
         </details>
-      </div>
-
-      <div className="navbar-center hidden lg:flex items-center justify-between">
-        <ul className="menu menu-horizontal px-1">{NavMenu}</ul>
       </div>
     </div>
   );

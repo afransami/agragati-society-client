@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="login-bg hero min-h-screen  ">
       <Helmet>
-        <title>Musical Mingle | Login</title>
+        <title>Agragati Society | Login</title>
       </Helmet>
       <div className=" grid lg:grid-cols-2 w-auto items-center ">
         <Player
@@ -59,40 +59,41 @@ const Login = () => {
           />
         </Player>
         <div className="card flex-shrink-0 shadow-xl">
-          <h1 className="text-4xl p-5 font-bold">Login!</h1>
+          <h1 className="text-4xl p-5 font-bold text-orange-600">Login!</h1>
+          <span className="divider"></span>
           <form onSubmit={handleSubmit(handleLogin)}>
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text  ">Email</span>
+                  {/* <span className="label-text">Email</span> */}
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   {...register("email")}
-                  {...register("email", { requiorange: true })}
-                  className="input input-bordeorange text-black"
+                  {...register("email", { required: true })}
+                  className="border-b border-orange-700 focus:outline-none bg-transparent"
                 />
                 {errors.email && (
-                  <span className="text-orange-500">This field is requiorange</span>
+                  <span className="text-orange-700">This field is requiorange</span>
                 )}
               </div>
               <div className="form-control relative ">
                 <label className="label ">
-                  <span>Password</span>
+                  {/* <span>Password</span> */}
                 </label>
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  placeholder="password"
+                  placeholder="Password"
                   {...register("password", {
-                    requiorange: true,
+                    required: true,
                   })}
-                  className="input  input-bordeorange text-black"
+                  className="border-b border-orange-600 focus:outline-none bg-transparent"
                 />
                 <button
                     type="button"
                     onClick={toggleConfirmPasswordVisibility}
-                    className="absolute top-14 right-4 text-gray-400"
+                    className="absolute top-2 right-4 text-gray-400"
                   >
                     {showConfirmPassword ? (
                       <FaEye className="w-5 h-5"></FaEye>
@@ -101,18 +102,18 @@ const Login = () => {
                     )}
                   </button>
 
-                {errors.password?.type === "requiorange" && (
-                  <p className="text-orange-500" role="alert">
-                    password is requiorange
+                {errors.password?.type === "required" && (
+                  <p className="text-orange-700" role="alert">
+                    password is required
                   </p>
                 )}
                 {errors.password?.type === "minLength" && (
-                  <p className="text-orange-500" role="alert">
+                  <p className="text-orange-700" role="alert">
                     password must be 6 characters
                   </p>
                 )}
                 {errors.password?.type === "pattern" && (
-                  <p className="text-orange-500" role="alert">
+                  <p className="text-orange-700" role="alert">
                     password must be at least 1 uppercase or letter case
                   </p>
                 )}
@@ -134,7 +135,7 @@ const Login = () => {
               <p className="text-center mt-5 font-semibold">
                 New to অগ্রগতি সোসাইটি ? Please contact
                 <Link className="font-bold text-xl" to="https://www.facebook.com/afransami" target="blank">
-                  <span> Admin</span>
+                  <span className="text-orange-600"> Admin</span>
                 </Link>
               </p>
             </div>
