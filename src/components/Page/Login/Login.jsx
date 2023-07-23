@@ -72,7 +72,7 @@ const Login = () => {
                   placeholder="Email"
                   {...register("email")}
                   {...register("email", { required: true })}
-                  className="border-b border-orange-700 focus:outline-none bg-transparent"
+                  className="border-b border-orange-600 focus:outline-none bg-transparent"
                 />
                 {errors.email && (
                   <span className="text-orange-700">This field is requiorange</span>
