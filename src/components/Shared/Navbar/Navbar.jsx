@@ -162,8 +162,8 @@ const Navbar = () => {
             <HiMenu className="text-3xl text-white"></HiMenu>
           </summary>
           <ul
-            className="p-2 menu dropdown-content z-[1] bg-base-100 w-48 tabIndex={0}
-            menu-compact bg-white mt-3 shadow-xl rounded-box items-center justify-between flex"
+            className="p-2 menu dropdown-content z-[1] w-48 tabIndex={0}
+            menu-compact bg-slate-800 text-white mt-3 shadow-xl rounded-box items-center justify-between flex"
           >
             {NavMenu}
           </ul>

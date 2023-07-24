@@ -58,7 +58,7 @@ const MemberDetailsForm = () => {
         <title>Agragati Society | Member's Form</title>
       </Helmet>
       <div className="grid grid-cols-1 lg:w-1/2">      
-        <div className="bg-slate-700 card flex-shrink-0 bg-gray-100 shadow-xl">
+        <div className="bg-slate-800 card flex-shrink-0 shadow-xl">
           <h1 className="text-4xl p-5 font-bold text-orange-500">Member's Form</h1>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div className="bg-slate-100 rounded card-body space-y-8">

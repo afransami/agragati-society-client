@@ -20,7 +20,17 @@ export const saveUser = (user) => {
   
 
 
-  
+  export const saveMemberDetails = (dataTotal) => {  
+    fetch("http://localhost:5000/membersForm", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(dataTotal),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
 
 

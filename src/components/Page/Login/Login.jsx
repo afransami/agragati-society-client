@@ -58,7 +58,7 @@ const Login = () => {
             buttons={["play", "repeat", "frame", "debug"]}
           />
         </Player>
-        <div className="card bg-slate-700 flex-shrink-0 shadow-xl">
+        <div className="card bg-slate-800 flex-shrink-0 shadow-xl">
           <h1 className="text-4xl p-5 font-bold text-orange-500">Login!</h1>          
           <form onSubmit={handleSubmit(handleLogin)}>
             <div className="card-body bg-slate-100 rounded">

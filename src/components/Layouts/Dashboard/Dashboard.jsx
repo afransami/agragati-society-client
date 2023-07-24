@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { useAdminDashboard } from "../../Hooks/useAdmin/useAdmin";
+import { useMembers } from "../../Hooks/useMembers/useMembers";
 
 // import { useInstructor } from "../../Hooks/useInstructor";
 // import { useStudent } from "../../Hooks/useStudent";
@@ -20,17 +22,10 @@ import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
-  const [isAdmin] = useAdminDashboard(user.email);
-  const [isInstructor] = useInstructor(user.email);
-  const [isStudent] = useStudent(user.email);
+  const [isAdmin] = useAdminDashboard(user.email);  
+  const [isMember] = useMembers(user.email);
 
-
-
-
-
-
-  return (
-    
+  return (   
           
     <div className="drawer lg:drawer-open ">
       <Helmet>
@@ -88,30 +83,9 @@ const Dashboard = () => {
             </>
           )}
 
-          {isInstructor && (
-            <>
-              <li>
-                <NavLink
-                  to="/dashboard/addAClass"
-                  className="uppercase btn btn-outline btn-warning border-0 border-b-4 mt-4 bg-gradient-to-r from-neutral-500 via-cyan-600 to-neutral-600 rounded shadow-xl bg-opacity-30 text-lg hover:scale-110"
-                >
-                  <FaAddressCard></FaAddressCard>
-                  Add a Class
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/dashboard/myClasses"
-                  className="uppercase btn btn-outline btn-warning border-0 border-b-4 mt-4 bg-gradient-to-r from-neutral-500 via-cyan-600 to-neutral-600 rounded shadow-xl bg-opacity-30 text-lg hover:scale-110"
-                >
-                  <FaBookReader></FaBookReader>
-                  My Classes
-                </NavLink>
-              </li>
-            </>
-          )}
 
-          {isStudent && (
+
+          {isMember && (
             <>
               <li>
                 <NavLink
