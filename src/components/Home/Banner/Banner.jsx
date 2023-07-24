@@ -67,7 +67,7 @@ const Banner = () => {
         <div className="container px-5 mx-auto">
           <div className="flex flex-wrap -m-4 text-center">
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-gray-900 text-white flex flex-col justify-center items-center">
+              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-slate-800 text-white flex flex-col justify-center items-center">
                 <FaUsers className="text-5xl text-orange-500"></FaUsers>
                 <h2 className="title-font font-medium text-3xl text-white ">
                   20
@@ -76,7 +76,7 @@ const Banner = () => {
               </div>
             </div>
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-gray-900 text-white flex flex-col justify-center items-center">
+              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-slate-800 text-white flex flex-col justify-center items-center">
                 <FaSlideshare className="text-5xl text-orange-500"></FaSlideshare>
                 <h2 className="title-font font-medium text-3xl text-white">
                   1 : 1
@@ -85,16 +85,16 @@ const Banner = () => {
               </div>
             </div>
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-gray-900 text-white flex flex-col justify-center items-center">
+              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-slate-800 text-white flex flex-col justify-center items-center">
                 <FaClock className="text-5xl text-orange-500"></FaClock>
                 <h2 className="title-font font-medium text-3xl text-white">
-                  1
+                  1 <span className="text-sm">Meeting</span>
                 </h2>
-                <p className="leading-relaxed">Meeting Monthly</p>
+                <p className="leading-relaxed">Monthly</p>
               </div>
             </div>
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-gray-900 text-white flex flex-col justify-center items-center">
+              <div className="border-2 border-gray-200 px-4 py-10 rounded-lg bg-slate-800 text-white flex flex-col justify-center items-center">
                 <FaHandshake className="text-5xl text-orange-500"></FaHandshake>
                 <h2 className="title-font font-medium text-3xl text-white  ">
                   24/7

@@ -8,10 +8,12 @@ import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState("transparent");
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setNavColor("#ffff") : setNavColor("transparent");
+    window.scrollY > 10
+      ? setNavColor("rgb(30 41 59)")
+      : setNavColor("transparent");
   };
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -38,10 +40,10 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/instructors">Instructors</Link>
+        <Link to="/members">Members</Link>
       </li>
       <li>
-        <Link to="/classes">Classes</Link>
+        <Link to="/projects">Projects</Link>
       </li>
 
       {user ? (
@@ -71,10 +73,10 @@ const Navbar = () => {
       ) : (
         <>
           <Link
-            className="group relative inline-block overflow-hidden border-b-4 px-8 py-2"
+            className="group relative inline-block overflow-hidden border-b-4 px-2 rounded py-2"
             to="/login"
           >
-            <span className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-500 transition-all group-hover:h-full group-active:bg-orange-600"></span>
+            <span className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-500 transition-all group-hover:h-full group-active:bg-orange-500"></span>
 
             <span className="relative font-medium text-xl text-orange-500 transition-colors group-hover:text-white">
               Login
@@ -95,7 +97,7 @@ const Navbar = () => {
       <div className="">
         <div className="flex justify-center items-center gap-6 uppercase font-extrabold tracking-widest mx-auto text-center">
           <Link>
-            <img className="w-20" src={logo} alt="" />
+            <img className="w-20 bg-white rounded" src={logo} alt="" />
           </Link>
           <Link className="text-3xl text-orange-500 font-bold">
             <div>
@@ -110,10 +112,10 @@ const Navbar = () => {
 
       <div className="navbar-end">
         <div className="navbar-center hidden lg:flex items-center justify-between">
-          <ul className="menu menu-horizontal px-1 text-orange-500 text-lg">{NavMenu}</ul>
+          <ul className="menu menu-horizontal px-1 text-orange-500 text-lg">
+            {NavMenu}
+          </ul>
         </div>
-
-
 
         {/* <div className='lg:hidden'>
           
@@ -155,14 +157,10 @@ const Navbar = () => {
           )}
         </div> */}
 
-
-
-
-
         <details className="dropdown dropdown-end lg:hidden ">
           <summary className="m-1 btn btn-sm bg-transparent">
-            <HiMenu className="text-3xl"></HiMenu>
-          </summary>          
+            <HiMenu className="text-3xl text-white"></HiMenu>
+          </summary>
           <ul
             className="p-2 menu dropdown-content z-[1] bg-base-100 w-48 tabIndex={0}
             menu-compact bg-white mt-3 shadow-xl rounded-box items-center justify-between flex"

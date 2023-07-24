@@ -41,7 +41,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-bg hero min-h-screen  ">
+    <div className="hero min-h-screen  ">
       <Helmet>
         <title>Agragati Society | Login</title>
       </Helmet>
@@ -58,11 +58,10 @@ const Login = () => {
             buttons={["play", "repeat", "frame", "debug"]}
           />
         </Player>
-        <div className="card flex-shrink-0 shadow-xl">
-          <h1 className="text-4xl p-5 font-bold text-orange-600">Login!</h1>
-          <span className="divider"></span>
+        <div className="card bg-slate-700 flex-shrink-0 shadow-xl">
+          <h1 className="text-4xl p-5 font-bold text-orange-500">Login!</h1>          
           <form onSubmit={handleSubmit(handleLogin)}>
-            <div className="card-body">
+            <div className="card-body bg-slate-100 rounded">
               <div className="form-control">
                 <label className="label">
                   {/* <span className="label-text">Email</span> */}
@@ -72,7 +71,7 @@ const Login = () => {
                   placeholder="Email"
                   {...register("email")}
                   {...register("email", { required: true })}
-                  className="border-b border-orange-600 focus:outline-none bg-transparent"
+                  className="border-b border-orange-500 focus:outline-none bg-transparent"
                 />
                 {errors.email && (
                   <span className="text-orange-700">This field is requiorange</span>
@@ -88,7 +87,7 @@ const Login = () => {
                   {...register("password", {
                     required: true,
                   })}
-                  className="border-b border-orange-600 focus:outline-none bg-transparent"
+                  className="border-b border-orange-500 focus:outline-none bg-transparent"
                 />
                 <button
                     type="button"
@@ -122,10 +121,10 @@ const Login = () => {
               {/* <p className="font-bold text-orange-500 text-xl"></p> */}
               <div className="form-control mt-6 ">
               <button className="group relative inline-block overflow-hidden border-b-4 px-8 py-2 text-center">
-                  <span className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-600 transition-all group-hover:h-full group-active:bg-orange-600"></span>
+                  <span className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-500 transition-all group-hover:h-full group-active:bg-orange-500"></span>
 
                   <input
-                    className="relative text-xl font-medium text-orange-600 transition-colors group-hover:text-white"
+                    className="relative text-xl font-medium text-orange-500 transition-colors group-hover:text-white"
                     type="submit"
                     value="Login"
                   ></input>
@@ -135,7 +134,7 @@ const Login = () => {
               <p className="text-center mt-5 font-semibold">
                 New to অগ্রগতি সোসাইটি ? Please contact
                 <Link className="font-bold text-xl" to="https://www.facebook.com/afransami" target="blank">
-                  <span className="text-orange-600"> Admin</span>
+                  <span className="text-orange-500"> Admin</span>
                 </Link>
               </p>
             </div>

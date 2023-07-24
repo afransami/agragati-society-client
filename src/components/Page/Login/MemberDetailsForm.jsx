@@ -79,39 +79,69 @@ const MemberDetailsForm = () => {
                 
                 <input
                   type="email"
-                  placeholder="Email"                  
+                  placeholder="Email"
+                  {...register("email")}
                   {...register("email", { required: true })}
                   className="border-b border-orange-500 focus:outline-none bg-transparent"
                 />
                 {errors.email && (
-                  <span className="text-red-500">This field is required</span>
+                  <span className="text-yellow-500">
+                    This field is required
+                  </span>
                 )}
               </div>
               <div className="form-control">
               
                 <input
-                  type="number"
-                  placeholder="Taka"
-                  {...register("number", { required: true })}
+                  type="url"
+                  placeholder="Photo url"
+                  {...register("photoURL", { required: true })}
                   className="border-b border-orange-500 focus:outline-none bg-transparent"
                 />
-                {errors.number && (
+                {errors.photoURL && (
                   <span className="text-red-500">This field is required</span>
                 )}
               </div>
+              <div className="form-control relative">
+                
+                <input
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Password"
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    pattern: /[A-Za-z]+/i,
+                  })}
+                  className="border-b border-orange-500 focus:outline-none bg-transparent"
+                />
+                <button
+                  type="button"
+                  onClick={toggleConfirmPasswordVisibility}
+                  className="absolute -top-4 right-4 text-gray-400"
+                >
+                  {showConfirmPassword ? (
+                    <FaEye className="w-5 h-5"></FaEye>
+                  ) : (
+                    <FaEyeSlash className="w-5 h-5"></FaEyeSlash>
+                  )}
+                </button>
 
-              <div className="form-control">
-              
-                <input
-                  type="date"
-                  placeholder="Date"
-                  {...register("date", { required: true })}
-                  className="border-b border-orange-500 focus:outline-none bg-transparent"
-                />
-                {errors.number && (
-                  <span className="text-red-500">This field is required</span>
+                {errors.password?.type === "required" && (
+                  <p className="text-red-500" role="alert">
+                    password is required
+                  </p>
                 )}
-              </div>             
+                {errors.password?.type === "minLength" && (
+                  <p className="text-red-500" role="alert">
+                    password must be 6 characters
+                  </p>
+                )}
+                {errors.password?.type === "pattern" && (
+                  <p className="text-red-500" role="alert">
+                    password must be at least 1 uppercase or letter case
+                  </p>
+                )}
+              </div>
 
               <div className="form-control mt-6 ">
               <button className="group relative inline-block overflow-hidden border-b-4 px-8 py-2 text-center">
