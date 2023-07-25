@@ -85,7 +85,7 @@ const Sidebar = () => {
       </div>
 
       <div className="w-full m-3 text-xl text-gray-900 font-semibold">
-   
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum accusantium enim delectus neque necessitatibus fugiat voluptatem exercitationem, adipisci voluptate porro. Voluptas at veritatis incidunt vitae fugiat nesciunt adipisci enim nostrum.</p>
       </div>
     </section>
   );

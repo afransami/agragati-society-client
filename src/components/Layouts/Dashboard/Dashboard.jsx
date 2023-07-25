@@ -20,10 +20,10 @@ import { useMembers } from "../../Hooks/useMembers/useMembers";
 
 
 
-const Dashboard = () => {
-  const { user } = useContext(AuthContext);
-  const [isAdmin] = useAdminDashboard(user.email);  
-  const [isMember] = useMembers(user.email);
+// const Dashboard = () => {
+//   const { user } = useContext(AuthContext);
+//   const [isAdmin] = useAdminDashboard(user.email);  
+//   const [isMember] = useMembers(user.email);
 
   return (   
           
