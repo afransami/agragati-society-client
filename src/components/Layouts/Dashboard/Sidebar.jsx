@@ -6,14 +6,15 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/ogragatiLogo.png";
 
 
-const Dash = () => {
+const Sidebar = () => {
   const menus = [
-    { name: "dashboard", link: "/", icon: MdOutlineDashboard },
-    { name: "user", link: "/", icon: AiOutlineUser },
-    { name: "messages", link: "/", icon: FiMessageSquare },
-    { name: "analytics", link: "/", icon: TbReportAnalytics, margin: true },
+    { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
+    { name: "User", link: "/", icon: AiOutlineUser },
+    { name: "Messages", link: "/", icon: FiMessageSquare },
+    { name: "Analytics", link: "/", icon: TbReportAnalytics, margin: true },
     { name: "File Manager", link: "/", icon: FiFolder },
     { name: "Cart", link: "/", icon: FiShoppingCart },
     { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
@@ -25,12 +26,18 @@ const Dash = () => {
     <section className="flex gap-6">
       
       <div
-        className={`bg-[#0e0e0e] min-h-screen ${
+        className={`bg-slate-800 min-h-screen ${
           open ? "w-72" : "w-16"
-        } duration-500 text-gray-100 px-4 mt-20`}
+        } duration-500 text-gray-100 px-4`}
       >
-       
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className=" flex justify-center items-center mt-6 p-2">
+        <Link to="/">
+            <img className="w-20 bg-white rounded" src={logo} alt="" />
+          </Link>
+          
+       <Link to="/" className={`${!open ? "hidden" : " text-center text-orange-500 font-semibold"} `}>অগ্রগতি সোসাইটি </Link>
+        </div>
+        <div className="mt-6 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => (
             <Link
               to={menu?.link}
@@ -84,4 +91,4 @@ const Dash = () => {
   );
 };
 
-export default Dash;
+export default Sidebar;

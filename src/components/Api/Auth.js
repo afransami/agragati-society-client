@@ -20,8 +20,8 @@ export const saveUser = (user) => {
   
 
 
-  export const saveMemberDetails = (dataTotal) => {  
-    fetch("http://localhost:5000/membersForm", {
+  export const saveMemberPayments = (dataTotal) => {  
+    fetch("http://localhost:5000/membersPayments", {
       method: "POST",
       headers: {
         "content-type": "application/json",

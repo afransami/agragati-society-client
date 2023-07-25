@@ -2,12 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Form } from "react-router-dom";
-
 import { toast } from "react-hot-toast";
-import { saveMemberDetails } from "../../../Api/Auth";
+import { saveMemberPayments } from "../../../Api/Auth";
 
 
-const MemberDetailsForm = () => {
+const MemberPaymentsForm = () => {
     
   const {
     register,
@@ -26,20 +25,20 @@ const MemberDetailsForm = () => {
     const dataTotal = { name, email, taka, date };
     
     console.log(dataTotal);
-    saveMemberDetails(dataTotal)
+    saveMemberPayments(dataTotal)
     reset()
-    toast.success('Members Details Uploaded Successfully!')
+    toast.success('Members Payments Uploaded Successfully!')
   };
 
   return (
     <div className="hero min-h-screen mx-auto container">
       <Helmet>
-        <title>Agragati Society | Member's Form</title>
+        <title>Agragati Society | Member's Payments Form</title>
       </Helmet>
       <div className="grid grid-cols-1 lg:w-1/2">
         <div className="bg-slate-800 card flex-shrink-0 shadow-xl">
           <h1 className="text-4xl p-5 font-bold text-orange-500">
-            Member's Form
+            Member's Payments Form
           </h1>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div className="bg-slate-100 rounded card-body space-y-8">
@@ -109,4 +108,4 @@ const MemberDetailsForm = () => {
   );
 };
 
-export default MemberDetailsForm;
+export default MemberPaymentsForm;
