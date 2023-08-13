@@ -1,23 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaClock, FaUsers, FaSlideshare, FaHandshake } from "react-icons/fa";
-
 // import { GiThreeFriends } from "react-icons/gi";
-import banner from "../../../assets/banner1.jpg";
+// import banner from "../../../assets/banner1.jpg";
 
 const Banner = () => {
   return (
     <div>
       {/* <section className=" relative bg-[url(https://img.freepik.com/free-photo/traffic-vehicle-urban-reflections-city_1112-973.jpg?w=740&t=st=1688746280~exp=1688746880~hmac=c7b0c4eb2cb49318784d471c5884476705c637fe7aefe268eb0dd4e5d4b60eab)] bg-cover lg:h-[700px] h-auto bg-center bg-no-repeat"> */}
-      <section className=" relative bg-[{banner}] bg-cover lg:h-[900px] h-auto bg-center bg-no-repeat" style={{backgroundImage:`url(${banner})`,backgroundSize: 'cover', 
+      <section className=" relative bg-[{banner}] bg-cover h-100vh bg-center mt-12 bg-no-repeat" style={{backgroundImage:`url(${banner})`, backgroundSize: 'cover', 
         backgroundRepeat: 'no-repeat', 
-        // height: '500px', 
         width: '100%', 
     }}>
         {/* <div className="absolute inset-0 bg-gradient-to-r w-full from-[#151515] to-[rgba(21, 21, 21, 0)]"></div> */}
         <div className="absolute inset-0 w-full bg-gradient-to-r from-[#1b1b1b] to-[rgba(21, 21, 21, 0)]"></div>
 
-        <div className="relative -top-1/6 max-w-screen-xl py-32 px-4 sm:px-6 container mx-auto lg:flex lg:h-screen lg:items-center lg:px-0">
+        <div className="relative -top-1/6 max-w-screen-full lg:py-32 py-24 px-4 md:px-6 container mx-auto lg:flex lg:h-screen lg:items-center lg:px-0">
           <div className="max-w-xl space-y-4 ltr:sm:text-left rtl:sm:text-right">
             <div className="text-3xl text-start font-extrabold sm:text-5xl">
               <h1 className="text-white mb-4 "> Agragati Society</h1>
